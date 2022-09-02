@@ -27,7 +27,7 @@ const Avatar = (props) => {
 
     useEffect(() => {
         if (!passwordProps) {
-            navigate(`/register/${token}`);
+            navigate(`/register`);
             return;
         }
 
@@ -66,7 +66,7 @@ const Avatar = (props) => {
     }
 
     const handleGoBack = () => {
-        navigate(`/register/${token}/name`);
+        navigate(`/register/name`);
     }
 
     const handlePressEnter = (e) => {

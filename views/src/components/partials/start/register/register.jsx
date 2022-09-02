@@ -100,12 +100,12 @@ const Register = () => {
         }
     }
 
-    useEffect(async () => {
-        const resultCheckToken = await checkToken(token);
-        if (resultCheckToken.status !== 200) {
-            return navigate('/');
-        }
-    }, [token])
+    // useEffect(async () => {
+    //     const resultCheckToken = await checkToken(token);
+    //     if (resultCheckToken.status !== 200) {
+    //         return navigate('/');
+    //     }
+    // }, [token])
 
     return (
         <Routes>

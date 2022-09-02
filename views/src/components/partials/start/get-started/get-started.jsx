@@ -54,11 +54,13 @@ const GetStarted = () => {
         if (!checkMail(email)) return;
         setIsLoading(true);
 
-        const result = await verifiEmail(email);
-
+        // const result = await verifiEmail(email);
+        const result = {
+            message : "Email đã được !"
+        }
         setIsLoading(false);
 
-        if (result.message) {
+        // if (result.message) {
             if (result.message === "Email đã được đăng ký!") {
                 //luu thong tin email len reduct
                 const action = updateEmail(email);
@@ -75,9 +77,9 @@ const GetStarted = () => {
                 dispatch(action);
                 localStorage.setItem('email', email);
             }
-        } else {
-            setAnotherError(result.error);
-        }
+        // } else {
+        //     setAnotherError(result.error);
+        // }
     }
 
     return (

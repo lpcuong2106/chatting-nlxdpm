@@ -118,12 +118,12 @@ const Name = (props) => {
         setErrorSex(null);
         handleUpdateUserInfo(firstName, lastName, sex);
 
-        navigate(`/register/${token}/avatar`);
+        navigate(`/register/avatar`);
     }
 
     const handleGoBack = (e) => {
         e.preventDefault();
-        navigate(`/register/${token}/`);
+        navigate(`/register/`);
     }
 
     const handlePressEnter = (e) => {

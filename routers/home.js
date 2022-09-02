@@ -5,7 +5,7 @@ const { isAuth } = require('../middlewares/auth.middleware')
 const homeController = require('../controllers/home.controller')
 
 // api register
-router.post('/register', isAuth, homeController.register)
+router.post('/register', homeController.register)
 
 //check token
 router.get('/check-token', isAuth, homeController.checkToken)

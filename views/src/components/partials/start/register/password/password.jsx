@@ -133,7 +133,7 @@ const Password = (props) => {
         if (resultCheckPassword < 2 ) return;
 
         handleUpdatePassword(password);
-        navigate(`/register/${token}/name`)
+        navigate(`/register/name`)
     }
 
     const handleGoBack = () => {

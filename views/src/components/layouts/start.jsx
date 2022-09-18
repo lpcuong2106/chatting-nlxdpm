@@ -35,9 +35,9 @@ const Start = () => {
                     <StartPicture />
                 </div>
             </div>
-            {isShowNotification ? <StartNotification
+            {/* {isShowNotification ? <StartNotification
                 email={email}
-            /> : '' }
+            /> : '' } */}
         </>
     );
 }

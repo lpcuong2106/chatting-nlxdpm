@@ -116,6 +116,7 @@ function Profile() {
 
     const handleChangeToUpdateImage = (e)=> {
         const image = e.target.files[0]
+        console.log(image)
         if(image.size >= 1000000) {
             const notification = updateNotification('Hình ảnh không được lớn hơn 1MB.')
             dispatch(notification)

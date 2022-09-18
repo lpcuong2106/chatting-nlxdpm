@@ -39,7 +39,12 @@ const Avatar = (props) => {
         //animation for review image
         const file = e.target.files[0];
         const type = file.type.split('/').splice(0, 1)[0];
-
+        if (file.size >= 1024000) {
+            setErrorAvatar('Vui lòng chọn file có kích thước nhỏ hơn 1MB');
+            return;
+        } else {
+            setErrorAvatar(null);
+        }
         if (type === 'image') {
             var File = new FileReader();
             File.readAsDataURL(file);
@@ -48,12 +53,11 @@ const Avatar = (props) => {
                 const img_review = (<img alt={file.name} src={e.target.result} ></img>);
                 set_img_tag(img_review);
             }
+        }else{
+            setErrorAvatar('Vui lòng chọn file có định dạng hình ảnh');
+            return;
         }
-        if (file.size >= 1024000) {
-            setErrorAvatar('Vui lòng chon hình ảnh có kích thước nhỏ hơn 1MB');
-        } else {
-            setErrorAvatar(null);
-        }
+       
 
         //handle change image
         handleUpdateAvatar(file.name, file);

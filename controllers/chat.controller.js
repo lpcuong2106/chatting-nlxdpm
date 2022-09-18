@@ -30,16 +30,18 @@ const getMembers = async (groupId, userId) => {
 
 
 module.exports.getListChat = async (req, res) => {
+    
     try {
         const userId = req.params.userId;
-        if(!userId) return res.sendStatus(404)
+        if(!userId) return res.json({ data: [] })
         let limit = req.query.limit ?? '100000000';
         let offset = req.query.position ?? '0';
         limit = parseInt(limit);
         offset = parseInt(offset);
         const listChat = await chat.getListChat(userId, limit, offset);
+     
         if (!listChat) {
-            return res.sendStatus(404)
+            return res.json({ data: [] })
         }
         const arr = []
         for (let value of listChat) {
@@ -66,6 +68,7 @@ module.exports.getListChat = async (req, res) => {
             }
             arr.push(chatItem);
         }
+      
         const sortArr = arr.sort((a, b) => b.messageId - a.messageId) // a - b la tang dan ,b -a la giam dan
         if (listChat.length > 0) {
             res.status(200).json({ data: sortArr });

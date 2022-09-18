@@ -48,10 +48,12 @@ const Register = () => {
     }
 
     const handleUpdateAvatar = (imageName, fileImage) => {
+        console.log(imageName, fileImage)
         if (!imageName && !fileImage) return;
 
-        if (avatar.file.size >= 1024000) {
+        if (fileImage.size >= 1024000) {
             setErrorAvatar('Vui lòng chon hình ảnh có kích thước nhỏ hơn 1MB');
+            return;
         };
 
         setAvatar({ ...avatar, nameImg: imageName, file: fileImage });
@@ -72,6 +74,7 @@ const Register = () => {
     }
 
     const handleSubmitRegister = async () => {
+        // console.log(avatar.file)
         if (avatar.file && avatar.file.size >= 1024000) {
             setErrorAvatar('Vui lòng chon hình ảnh có kích thước nhỏ hơn 1MB');
             return;

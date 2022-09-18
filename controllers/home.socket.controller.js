@@ -122,11 +122,12 @@ module.exports.updateProfile = async (data, socket, io) => {
         if (sex) UserUpdateObj.sex = sex;
 
         let getImage = (await user.get(userId))[0].image;
+        let defaultImage = ['male-avatar.png', 'female-avatar.png']
         //neu khong co hinh tra ve hinh cu
         UserUpdateObj.image = getImage;
         if (image) {
             //kiem tra hinh anh da luu truoc do, neu anh ton tai thi xoa
-            if (getImage) {
+            if (getImage && !defaultImage.includes(getImage) ) {
                 fs.unlink(path.resolve(__dirname, '../public/avatarUser/', getImage), (error) => {
                     if (error) {
                         socket.emit('update-profile', { msg: 'Lỗi, xữ lý dữ liệu không thành công' });

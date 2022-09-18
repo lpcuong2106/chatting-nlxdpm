@@ -84,6 +84,7 @@ async function getGroupsList(userId) {
 }
 
 async function register(userInfo, token = null) {
+    console.log(userInfo)
     if (!userInfo) return
     const result = await getAPI('POST', '/register', userInfo, token)
 

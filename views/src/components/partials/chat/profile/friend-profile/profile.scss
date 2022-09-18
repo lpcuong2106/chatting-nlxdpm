@@ -29,7 +29,7 @@
             height: 3rem;
             font-size: 1.2rem;
             text-align: center;
-            color: #5865F2;
+            color: #ff144e;
             font-weight: bold;
             line-height: 3rem;
             border-bottom: 1px solid #cecece;
@@ -42,7 +42,7 @@
                 right: 4%;
                 top: 25%;
                 cursor: pointer;
-                color: #5865F2;
+                color: #ff144e;
             }
         }
         
@@ -124,16 +124,16 @@
                     }
 
                     .btn:hover {
-                        box-shadow: 0 0 5px #5865F2;
+                        box-shadow: 0 0 5px #ff144e;
                     }
 
                     .friend-profile-action-btn-1 {
-                        color: #5865F2;
-                        border: 1px solid #5865F2;
+                        color: #ff144e;
+                        border: 1px solid #ff144e;
                     }
 
                     .friend-profile-action-btn-2 {
-                        background-color: #5865F2;
+                        background-color: #ff144e;
                         color: #ffffff;
                     }
                 }
@@ -184,8 +184,8 @@
             border-bottom: 1px solid #41454d;;
         }
         .add-friend-btn-cancel {
-            color: #5865F2;
-            border-color: #5865F2;
+            color: #ff144e;
+            border-color: #ff144e;
             background-color: #36393f;
         }
     }

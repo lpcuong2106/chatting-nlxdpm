@@ -53,7 +53,7 @@ function Item({id, members, image, name, lastMessage, status}) {
 
     const style = {
         // eslint-disable-next-line eqeqeq
-        color: ['Đã nhận', 'Đã gửi'].includes(lastMessage.status) && !lastMessage.isSender && currentChatSelector.receiverId != id ? "#5865F2" : '',
+        color: ['Đã nhận', 'Đã gửi'].includes(lastMessage.status) && !lastMessage.isSender && currentChatSelector.receiverId != id ? "#ff144e" : '',
         // eslint-disable-next-line eqeqeq
         fontWeight: ['Đã nhận', 'Đã gửi'].includes(lastMessage.status) && !lastMessage.isSender && currentChatSelector.receiverId != id ? "bold" : '',
     }

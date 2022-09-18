@@ -10,7 +10,7 @@ function Message({sender, next, children, date, image, name, id}) {
 
     /*----styles----*/
     const styleContent = {
-        backgroundColor: children.type === 'img' ? 'none' : sender === 0 ? '#5865F2' : '',
+        backgroundColor: children.type === 'img' ? 'none' : sender === 0 ? '#ff144e' : '',
         color: sender === 0 ? 'white' : '',
         padding: children.type !== 'img' ? '.5rem 1.25rem' : '0',
         float: sender === 0 ? 'left' : 'right',

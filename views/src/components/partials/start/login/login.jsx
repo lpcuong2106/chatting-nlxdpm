@@ -150,13 +150,7 @@ const Login = () => {
                 <br />
 
                 <div className='text-order-feature'>
-                    <Link
-                        className='left text-primary'
-                        to="#"
-                    >
-                        Quên mật khẩu?
-                    </Link>
-
+       
                     <Link
                         className='right text-primary'
                         to="/"

@@ -22,9 +22,9 @@ const StartNotification = (props) => {
                         Xác thực email thành công.
                         <br/><br/>
                         Hệ thống vừa gửi một email tới địa chỉ: {email}, vui lòng kiểm tra email và bắt đầu
-                        trải niệm Merry Chat nhé!
+                        trải niệm Kaito Chat nhé!
                         <br/><br/>
-                        Merry Chat xin chúc bạn có được trải niệm tốt nhất!
+                        Kaito Chat xin chúc bạn có được trải niệm tốt nhất!
                     </p>
                     <div className="start-notification-footer">
                         <button 

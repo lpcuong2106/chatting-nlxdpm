@@ -104,10 +104,10 @@ module.exports.verifyEmail = async (req, res) => {
         let info = await transporter.sendMail({
             from: `'${email}'`,
             to: email,
-            subject: 'Confirm your account on Merry-chat',
+            subject: 'Confirm your account on Kaito Chat-chat',
             html: ` <form style="padding: 0 20px; width: 600px; height: 300px; margin: 0 auto; border: 1px solid lightgrey; border-radius: 10px;">
                         <h1 style="margin-bottom: 15px; width: 100%; color: #5865F2; text-align: center;">MERRY CHAT</h1>
-                        <h3 style="color: grey; font-size: 17px;"> Xác nhận email đăng nhập cùng Merry!</h3>
+                        <h3 style="color: grey; font-size: 17px;"> Xác nhận email đăng nhập cùng Kaito Chat!</h3>
                         <p style="font-size: 17px; width: 100%; color: grey">Xin chào!</p>
                         <p style="font-size: 17px; width: 100%; color: grey; text-align: justify;">Cảm ơn bạn đã đăng ký tài khoản với chúng tôi. Để bắt đầu, chúng tôi cần bạn xác nhận email này chính là bạn. Hãy nhấp vào nút bên dưới để tiếp tục:</p>
                         <p style="margin-top: 10px;">

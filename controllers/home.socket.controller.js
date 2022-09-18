@@ -150,16 +150,17 @@ module.exports.updateProfile = async (data, socket, io) => {
                 }
             });
         }
-
         //update data to database
         await user.updateProfile(UserUpdateObj, userId);
 
         //return to all client
         const resultGroups = await group.getGroup(userId, 10000, 0);
-        const groupIdArr = resultGroups.map(Element => {
-            return Element.groupId;
-        });
-        UserUpdateObj.groupId = groupIdArr;
+        if(resultGroups){
+            const groupIdArr = resultGroups.map(Element => {
+                return Element.groupId;
+            });
+            UserUpdateObj.groupId = groupIdArr;
+        }
         UserUpdateObj.name = `${UserUpdateObj.lastName} ${UserUpdateObj.firstName}`;
         UserUpdateObj.userId = userId;
         io.emit('update-profile', UserUpdateObj);

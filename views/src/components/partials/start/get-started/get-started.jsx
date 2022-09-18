@@ -54,15 +54,17 @@ const GetStarted = () => {
         if (!checkMail(email)) return;
         setIsLoading(true);
 
-        // const result = await verifiEmail(email);
-        const result = {
-            message : "Email đã được !"
-        }
+        const result = await verifiEmail(email);
+        console.log(result)
+        // const result = {
+        //     message : "Email đã được !"
+        // }
         setIsLoading(false);
 
         // if (result.message) {
-            if (result.message === "Email đã được đăng ký!") {
+            if (result && result.message === "Email đã được đăng ký!") {
                 //luu thong tin email len reduct
+                alert(result.message);
                 const action = updateEmail(email);
                 localStorage.setItem('email', email);
                 dispatch(action);
@@ -71,11 +73,12 @@ const GetStarted = () => {
                 //email chua duoc dang ky
                 const stoteData = {
                     email: email,
-                    showNotification: true
+                    showNotification: false
                 }
                 const action = update(stoteData);
                 dispatch(action);
                 localStorage.setItem('email', email);
+                navigate('/register');
             }
         // } else {
         //     setAnotherError(result.error);
@@ -97,7 +100,7 @@ const GetStarted = () => {
                     </p>
                 </div>
                 <p className='get-start-slogan'>
-                    Hãy để Merry kết nối chúng ta lại gần nhau hơn.
+                    Hãy để Kaito Chat kết nối chúng ta lại gần nhau hơn.
                 </p>
                 <form onSubmit={e => handleSubmitEmail(e)} method='POST'>
                     <input
@@ -117,7 +120,7 @@ const GetStarted = () => {
                         {anotherError}
                     </span>
                     <button className='start-btn start-btn-primary custom-btn-start '>
-                        {isLoading ? <StartLoading /> : 'Bắt đầu'}
+                        {isLoading ? <StartLoading /> : 'Đăng ký'}
                     </button>
                 </form>
                 <br />

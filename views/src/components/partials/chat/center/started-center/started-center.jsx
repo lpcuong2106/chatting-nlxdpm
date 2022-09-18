@@ -15,7 +15,7 @@ function StartedCenter() {
                     <p>Chia sẻ niềm vui, gắn kết cuộc sống</p>
                 </div>
                 <div className="started-center-panner">
-                    <p>Hãy để Merry kết nối chúng ta lại gần nhau hơn.</p>
+                    <p>Hãy để Kaito Chat kết nối chúng ta lại gần nhau hơn.</p>
                 </div>
             </div>
         </div>

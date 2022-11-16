@@ -29,11 +29,15 @@ module.exports.getGroups = async (req, res) => {
         limit = parseInt(limit);
         offset = parseInt(offset);
         if (!userId) {
-            return res.sendStatus(404)
+            return res.status(200).json({
+                data: []
+            })
         }
         const getGroup = await group.getGroup(userId, limit, offset);
         if (!getGroup) { //refalsy
-            return res.sendStatus(404)
+            return res.status(200).json({
+                data: []
+            })
         }
         const getGroupMembers = []
 
@@ -97,7 +101,7 @@ module.exports.getGroups = async (req, res) => {
                 data: arr
             });
         } else {
-            res.status(404).json({
+            res.status(200).json({
                 data: []
             })
         }

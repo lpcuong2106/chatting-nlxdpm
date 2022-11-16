@@ -160,6 +160,7 @@ const friendsReducer = (state = initial, action) => {
         
         case 'DELETE_FRIEND': {
             let newFriendList = [...state.friendsList]
+            console.log('list friend', action.data.senderId )
             // eslint-disable-next-line eqeqeq
             if(action.data.senderId == localStorage.getItem('userId')) {
                 // eslint-disable-next-line eqeqeq

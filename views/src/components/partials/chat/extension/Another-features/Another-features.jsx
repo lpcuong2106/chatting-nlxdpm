@@ -72,7 +72,7 @@ const AnotherFeatures = () => {
                         <DeleteGroup />
                     </> :
                     <>
-                        <CreateGroup />
+                        {/* <CreateGroup /> */}
                         <ManagerFriend />
                     </>}
             </div>
